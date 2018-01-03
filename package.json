@@ -1,0 +1,40 @@
+{
+  "name": "datran",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morrelinko/datran.git"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "response",
+    "request",
+    "transform"
+  ],
+  "author": "Laju Morrison <morrelinko@gmail.com> (http://morrelinko.com)",
+  "bugs": {
+    "url": "https://github.com/morrelinko/datran/issues"
+  },
+  "homepage": "https://github.com/morrelinko/datran#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^4.1.0",
+    "should": "^13.2.0"
+  }
+}

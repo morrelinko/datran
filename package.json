@@ -1,7 +1,7 @@
 {
   "name": "datran",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
     "test": "mocha"

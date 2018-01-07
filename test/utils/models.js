@@ -4,7 +4,8 @@ function user () {
   return {
     _id: 31963248136318,
     firstName: 'John',
-    lastName: 'Doe'
+    lastName: 'Doe',
+    photoUrl: 'https://johndoephoto.test'
   }
 }
 

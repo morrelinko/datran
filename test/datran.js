@@ -3,7 +3,7 @@
 const should = require('should')
 const datran = require('../lib')
 const types = require('../lib/types')
-const models = require('./models')
+const models = require('./utils/models')
 
 describe('datran.create()', function () {
   it('returns an instance of data builder', function () {

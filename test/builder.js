@@ -3,6 +3,8 @@
 const { assert } = require('chai')
 const types = require('../lib/types')
 const Builder = require('../lib/builder')
+const transformers = require('./utils/transformers')
+const models = require('./utils/models')
 
 describe('builder', function () {
   it('transforms item resource using callback', async function () {
@@ -30,5 +32,16 @@ describe('builder', function () {
     let json = await builder.toJson()
 
     assert.equal(json, '[{"foo":"bar"},{"some":"thing"}]')
+  })
+
+  it('includes sub document if requested', async function () {
+    let resource = new types.Item(models.user(), new transformers.User())
+    let builder = new Builder(resource, { fields: 'photo' })
+
+    let data = await builder.toObject()
+
+    assert.hasAllKeys(data, ['name', 'photo'])
+    assert.equal(data.name, 'John Doe')
+    assert.equal(data.photo.url, 'https://johndoephoto.test')
   })
 })

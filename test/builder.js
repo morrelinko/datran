@@ -35,7 +35,7 @@ describe('builder', function () {
   })
 
   it('includes sub document if requested', async function () {
-    let resource = new types.Item(models.user(), new transformers.User())
+    let resource = new types.Item(models.user(), transformers.User)
     let builder = new Builder(resource, { fields: 'photo' })
 
     let data = await builder.toObject()

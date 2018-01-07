@@ -15,7 +15,7 @@ class User extends Transformer {
   }
 
   includePhoto (model) {
-    return this.item(model, new UserPhoto())
+    return this.item(model, UserPhoto)
   }
 }
 

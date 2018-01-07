@@ -1,6 +1,6 @@
-## Datran
+# Datran
 
-Data Transformer
+This library is inspired by the REST APIS Best practices & the Fractal library.
 
 Use Case: API Response Formatter
 
@@ -52,44 +52,16 @@ class UserTransformer extends Transformer {
 
 ### Embedded Resources
 
-Working with embedded resources
+TODO Docs
 
-Example Request
+### Resource Types
 
-```
-https://api.sample.test/thread?fields=post,post.comments:limit(5|1)
-```
+TODO Docs
 
-The `fields` query describes:
+### Custom Data Serializer
 
-IncludeResource: post
-IncludeResource: post.comments Limit: (PerPage: 5, Offset: 1)
-IncludeResource: post.comments.user
-ExcludeResource: post.thumbnail
+TODO Docs
 
-Example Setup 
+### Custom Fields Parser
 
-```js
-const ThreadTransformer = Transformer.create({
-  availableIncludes: ['post'],
-
-  transform (model) {
-
-  },
-
-  async includePost (model, params) {
-    const post = await model.related('post')
-      .limit(params.limit.perPage)
-      .offset(params.limit.offset)
-      .fetch()
-
-    return {
-      message: post.parsed_text
-    }
-  }
-})
-```
-
-
-
-
+TODO Docs
